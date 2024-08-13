@@ -1,27 +1,73 @@
-# SecurityProjectFront
+# 🔐 Angular Security Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+## 🚀 Introduction
 
-## Development server
+This project is a demonstration of implementing security practices in an **Angular** application. The focus is on safeguarding the frontend by controlling access to various components and routes based on user roles and permissions. This project is designed to work in conjunction with a secure backend, such as the Spring Boot application with Spring Security.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Key Features
 
-## Code scaffolding
+### 🗝️ Role-Based Access Control (RBAC)
+- **Roles & Permissions**: Users are assigned roles that dictate their access levels within the application. Each role is associated with specific permissions, allowing or restricting access to certain routes and components.
+- **Route Guards**: Angular route guards are utilized to protect routes based on the user’s role, preventing unauthorized access.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🧑‍💻 User Authentication
+- **JWT Authentication**: The application uses JSON Web Tokens (JWT) for secure user authentication. The JWT is stored in the browser's local storage and is used to verify the user's identity on each request.
+- **Login & Logout**: Secure login and logout mechanisms are implemented, ensuring that users can safely access and exit the application.
 
-## Build
+### 🔒 Component Protection
+- **Protected Components**: Certain components are only accessible to users with the appropriate roles. This is enforced by checking the user's permissions before rendering the component.
+- **Dynamic Content Rendering**: Content within components can be dynamically rendered based on the user's role, ensuring that users only see what they are authorized to access.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🗂️ Project Structure
 
-## Running unit tests
+- **src/app**: Contains the main Angular components, services, and modules.
+- **auth**: Manages authentication, including login services, JWT handling, and route guards.
+- **models**: Defines data models, such as User and Role.
+- **services**: Provides services for handling API requests and user authentication.
+- **guards**: Implements Angular route guards to protect routes based on roles.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ⚙️ Technologies Used
 
-## Running end-to-end tests
+- **Angular**: Frontend framework used to build the application.
+- **JWT**: Used for secure authentication of users.
+- **TypeScript**: Programming language for building Angular components and services.
+- **CSS/HTML**: For styling and structuring the application’s user interface.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🧩 Setup & Installation
 
-## Further help
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/BiouiAdnane/AngularSecurity.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. **Navigate to the project directory**:
+   ```bash
+   cd AngularSecurity
+
+3. **Install the dependencies**:
+   ```bash
+   npm install
+
+4. **Clone the repository**:
+   ```bash
+   git clone https://github.com/BiouiAdnane/AngularSecurity.git
+
+5. **Run the application**:
+   ```bash
+   ng serve
+
+## 🛡️ Security Configuration
+The security is primarily handled using Angular's built-in tools, such as route guards and JWT authentication. Role-based access control is enforced throughout the application, ensuring that users only access the routes and components they are authorized to use.
+
+## 📊 Future Enhancements (Optional)
+Consider implementing additional security measures such as:
+  - Two-Factor Authentication (2FA): Adding an extra layer of security for user login.
+  - Enhanced Logging: Tracking user activities for better monitoring and auditing.
+  - API Rate Limiting: Preventing abuse by limiting the number of API requests a user can make in a certain timeframe.
+   
+## 🔗 Related Projects
+
+- **Backend Integration**: [Link to the Spring Security backend repository](https://github.com/BiouiAdnane/SpringSecurity)
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
